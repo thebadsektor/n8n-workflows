@@ -1,0 +1,148 @@
+{
+  "name": "Introduction to JavaScript + Code Node Basics",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        176,
+        0
+      ],
+      "id": "efafa5b4-da6c-4e3a-8ead-27ba89bc8091",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        512,
+        0
+      ],
+      "id": "3ff35f6d-d38a-41ae-90ef-4e9387d45fee",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "content": "## JSON vs JavaScript\n\nJSON (Data Storage):\n\n• Organizes and structures data\n• Static - just sits there\n• Like a recipe listing ingredients\n\nJavaScript (Data Processing):\n\n• Programming language that DOES things\n• Reads, transforms, creates data\n• Like the chef using the recipe",
+        "height": 304,
+        "width": 448,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        -400
+      ],
+      "id": "97035b31-ed9d-4679-b9fc-8edb1c0a5530",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Code Node Rules\n\nRule 1: Access Data\n\n• Use $input.all() to get data from previous nodes\n\nRule 2: Always Return Object\n\n• Must return something in curly braces {}\n• Even if empty: return {}\n• Single value: return { result: \"value\" }",
+        "height": 304,
+        "width": 448,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -400
+      ],
+      "id": "61600f7f-2ff7-4b85-9197-b418f89ce0bb",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Code Node Benefits\n\n• Consistency - Works exactly the same every time\n• Reliability - Set it up once and it just works\n• Cost-Free - No AI tokens or API costs\n• Speed - Executes in milliseconds\n• No Data Limits - Can handle unlimited data",
+        "height": 304,
+        "width": 448,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        560,
+        -400
+      ],
+      "id": "58cd0d9a-53c9-4767-950f-020ffa7a0d93",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## CODE NODE = THE KITCHEN\n(Where the magic happens in N8N)\n\n",
+        "height": 576,
+        "width": 1024
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        -400
+      ],
+      "id": "b22d942d-9b6e-474f-8841-72734d03fcef",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## JAVASCRIPT = THE CHEF\n\n• Reads the recipe (JSON data)\n• Heats oven to right temperature\n• Mixes ingredients in right order\n• Decides if needs more cooking time\n• Creates final dish description",
+        "height": 240,
+        "width": 400,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        -240
+      ],
+      "id": "b11b32f7-10f0-4d30-9c2e-97d1650deb51",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "## JSON = RECIPE\n\n• Name: \"Pizza\"\n• Temperature: 350°F\n• Ingredients: [\"dough\", \"sauce\", \"cheese\"]\n(Static data - just lists ingredients)",
+        "height": 176,
+        "width": 320,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1808,
+        -208
+      ],
+      "id": "e4a2ed8b-cae2-4b28-9566-2e0b2500a3b8",
+      "name": "Sticky Note5"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6e27fe10-4593-40eb-bc0d-dc2a7291a88d",
+  "meta": {
+    "instanceId": "ae59e6b831344dba624c99cbe778a4bc47150f8e64de86a8011d15bac8e58c21"
+  },
+  "id": "feilLI4Br9GNVLOH",
+  "tags": []
+}
