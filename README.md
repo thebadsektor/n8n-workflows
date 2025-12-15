@@ -1,1 +1,1 @@
-See blog at https://hashnode.com/draft/693f9c4ee84c999c2585de03
+See blog at https://badsektor.hashnode.dev/gerald-villaran-n8n-workflow-portfolio
